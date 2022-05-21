@@ -173,7 +173,8 @@ class MainActivity : AppCompatActivity() {
 
         val human = Human("波多野慎一", 32,"プログラミング")
         human.say()
-        human.think()
+        val think = Human("",0,"プログラミング")
+        think.think()
 
     }
 }
