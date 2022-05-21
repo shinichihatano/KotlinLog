@@ -3,8 +3,12 @@ package com.example.kotlinlog
 import android.util.Log
 
 open class Human : Animal , Thinkable{
+    //プロパティ
+    var hobby:String
+
     //引数付きコンストラクタ
-    constructor(name: String, age: Int, hobby: String): super(name,age,hobby){
+    constructor(name: String, age: Int, hobby: String): super(name,age){
+        this.hobby = hobby
     }
 
     override fun say(){

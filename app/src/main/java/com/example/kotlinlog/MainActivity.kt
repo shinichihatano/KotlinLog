@@ -155,17 +155,17 @@ class MainActivity : AppCompatActivity() {
 
 
         //クラスとインスタンス
-        val dog = Dog("ポチ",3,"プログラミング")
+        val dog = Dog("ポチ",3)
         dog.say()
         Log.d("kotlintest", "犬の名前は" + dog.name + "です。")
         Log.d("kotlintest", "犬の年齢は" + dog.age + "歳です。")
 
-        val dog2 = Dog("ハチ",10,"プログラミング")
+        val dog2 = Dog("ハチ",10)
         dog2.say()
         Log.d("kotlintest", "犬の名前は" + dog2.name + "です。")
         Log.d("kotlintest", "犬の年齢は" + dog2.age + "歳です。")
 
-        val bigdog = BigDog("ヨーゼフ",15,"プログラミング")
+        val bigdog = BigDog("ヨーゼフ",15)
 
         bigdog.say()
         Log.d("kotlintest", "犬の名前は" + bigdog.name + "です。")
