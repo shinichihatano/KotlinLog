@@ -166,15 +166,68 @@ class MainActivity : AppCompatActivity() {
         Log.d("kotlintest", "犬の年齢は" + dog2.age + "歳です。")
 
         val bigdog = BigDog("ヨーゼフ",15)
-
         bigdog.say()
         Log.d("kotlintest", "犬の名前は" + bigdog.name + "です。")
         Log.d("kotlintest", "犬の年齢は" + bigdog.age + "歳です。")
 
-        val human = Human("波多野慎一", 32,"プログラミング")
+        val human = Human("A", 1,"B")
+        val think = Human("C",2,"D")
         human.say()
-        val think = Human("",0,"プログラミング")
+        human.think()
+        think.say()
         think.think()
+
+        //Lesson 3Chapter 10.2 よく使うメソッド 文字列の比較
+        val str1 = "Hello"
+        val str2 = "World"
+        val str3 = "Hello"
+
+        if (str1.equals(str2)) {
+            Log.d("kotlintest", "str1とstr2は一緒です")
+        } else {
+            Log.d("kotlintest", "str1とstr2は異なります")
+        }
+
+        if (str1.equals(str3)) {
+            Log.d("kotlintest", "str1とstr3は一緒です")
+        } else {
+            Log.d("kotlintest", "str1とstr3は異なります")
+        }
+
+        //文字列テンプレート
+        val i = 100
+        val str = i.toString() + " * 100 = ${i * 100}"
+            Log.d("kotlintest",str)
+
+        //Lesson 3Chapter 11.4 リファレンス List
+        //読み込み専用Listの作成
+        val list = listOf(1,2,3)
+        //list[0] = 5 //書き込みできない（エラーになる）
+
+        //書き込み可能Mutablelistの作成
+        val mulist = mutableListOf("A","B","C")
+        mulist[0] = "X"
+        // mulist[1] = 1 // 型が違うのでエラーになる
+
+        //Map
+        // 読み込み専用Mapの作成
+        val map = mapOf(1 to "x", 2 to "y", -1 to "zz")
+        // map[2] = "Y" // 書き込みできない（エラーになる）
+
+        // 書き込み可能MutableMapの作成（型を指定した例）
+        val mumap = mutableMapOf<String, Int>("A" to 100, "B" to 200, "C" to 300)
+        mumap.put("D", 400)
+
+        //Set
+        // 読み込み専用Setの作成
+        val set1 = setOf(1, 2, 3, 3) // 重複した要素は排除される
+        val set2 = setOf(3, 2, 1)
+        // 要素が一致しているのでtrueと表示される
+        Log.d("kotlinlog", (set1 == set2).toString())
+
+        // 書き込み可能MutableSetの作成
+        val muset = mutableSetOf("A", "B", "C")
+        muset.add("D")
 
     }
 }
